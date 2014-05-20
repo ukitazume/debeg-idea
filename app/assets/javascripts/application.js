@@ -15,3 +15,25 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+  $(".like").on('click', function(ev){
+    console.log(this)
+    ev.preventDefault();
+
+    $.ajax(this.href)
+    .done(function(msg) {
+      if (msg.action === 'like') {
+        $(ev.target).parent().parent().children().toggleClass("hidden-button");
+        $(ev.target).parent().addClass("hidden-button");
+        $(".current-user-icon.idea-"+msg.idea_id).toggleClass("hidden-icon");
+      } else {
+        $(ev.target).parent().parent().children().toggleClass("hidden-button");
+        $(ev.target).parent().addClass("hidden-button");
+        $(".current-user-icon.idea-"+msg.idea_id).addClass("hidden-icon");
+      }
+    })
+    .fail(function(msg) {
+      alert("しっぱいしました reloadしてね")
+    });
+  })
+});

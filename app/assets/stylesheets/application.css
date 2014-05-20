@@ -12,3 +12,10 @@
  *= require bootstrap
  *= require_tree .
  */
+
+.hidden-icon {
+  display: none;
+}
+.hidden-button {
+  display: none;
+}

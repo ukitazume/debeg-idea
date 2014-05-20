@@ -29,3 +29,7 @@
           = idea.title
         - else
           = idea.title
+      %p
+        %span ↑
+        = likes_list(idea)
+        = like_button(idea)
