@@ -29,7 +29,9 @@ module ApplicationHelper
       users.each do |user|
         html << image_tag(user.image_url, width: 30, height: 30, alt: user.nickname, title: user.nickname)
       end
-      html << image_tag(current_user.image_url, width: 30, height: 30, alt: current_user.nickname, title: current_user.nickname, class: "#{klass} current-user-icon #{(current_user_show) ? '' : 'hidden-icon'}")
+      if logged_in?
+        html << image_tag(current_user.image_url, width: 30, height: 30, alt: current_user.nickname, title: current_user.nickname, class: "#{klass} current-user-icon #{(current_user_show) ? '' : 'hidden-icon'}")
+      end
       html.html_safe
     end
   end
