@@ -14,7 +14,7 @@ gem 'haml-rails'
 gem 'rails-assets-bootstrap'
 gem 'erb2haml'
 gem 'therubyracer'
-gem 'omniauth'
+gem 'omniauth', '>= 2.0.0'
 gem 'omniauth-twitter'
 gem 'newrelic_rpm'
 
