@@ -15,7 +15,7 @@ gem 'rails-assets-bootstrap'
 gem 'erb2haml'
 gem 'therubyracer'
 gem 'omniauth'
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', '>= 1.0.1'
 gem 'newrelic_rpm'
 
 group :development, :test do
