@@ -36,8 +36,8 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 2.6.0'
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.2.1'
+  gem 'poltergeist', '>= 1.5.0'
   gem 'database_rewinder'
   gem 'launchy'
 end
