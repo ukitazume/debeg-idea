@@ -39,7 +39,7 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_rewinder'
-  gem 'launchy'
+  gem 'launchy', '>= 2.4.2'
 end
 
 group :production do
